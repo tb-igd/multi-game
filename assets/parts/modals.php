@@ -16,23 +16,23 @@
                         </div>
                         <div class="col-md-10">
                             <small class="modal-title">You can create your own character on this world. You can be unique or you may see a doppelganger.</small>
-                            <form>
+                            <form method="POST" id="createown">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Username / Email</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username or email">
+                                    <label for="username">Username / Email</label>
+                                    <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Enter username or email">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Confirm Password</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your character's name">
-                                    <small id="emailHelp" class="form-text text-muted">This name will appear as your display name</small>
+                                    <label for="confpassword">Confirm Password</label>
+                                    <input type="password" class="form-control" id="confpassword" aria-describedby="emailHelp" placeholder="Enter your character's name">
+                                    <small class="form-text text-danger" id="password_check" style="display:none">Passwords do not match, my friend.</small>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Nickname</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your character's name">
+                                    <label for="nickname">Nickname</label>
+                                    <input type="text" class="form-control" name="nickname" id="nickname" aria-describedby="emailHelp" placeholder="Enter your character's name">
                                     <small id="emailHelp" class="form-text text-muted">This name will appear as your display name</small>
                                 </div>
 
@@ -55,8 +55,10 @@
                                     </div>
                                     <br/>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Create Game Character</button>
+                                <button type="submit" class="btn btn-primary" id="btnSub">Create Your Own Game Character</button>
                                 <small id="emailHelp" class="form-text text-muted">You can customize profile avatar later after you create a game character.</small>
+                                <small class="form-text text-success" id="createsuccess" style="display:none">Own character creation successfull and has been completed!</small>
+                                <small class="form-text text-warning" id="createfail" style="display:none">Own character creation has failed, there may be error in the system.</small>
                             </form>
                         </div>
                         <div class="col-md-1">
